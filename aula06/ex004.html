@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            font: normal 20pt arial;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        var nome = window.prompt('Digite seu Nome: ')
+        document.write(`Seu nome em Letras Maíusculas é ${nome.toUpperCase()} <br>`)
+
+        /*var n1 = Number.parseInt(window.prompt('Digite um número: '))
+            var n2 = Number.parseInt(window.prompt('Digite outro número: '))
+    
+            var soma = n1 + n2
+    
+            document.write(`A soma de ${n1} e ${n2} é ${soma}<br> `)*/
+
+
+
+        /*var nome = window.prompt('Qual é o seu nome: ')
+        document.writeln(`Olá ${nome} Seu nome tem ${nome.length} letras <br>`)
+        document.writeln(`Olá ${nome} seu nome em maísculas é ${nome.toUpperCase()} <br>`)
+        document.write(`Olá ${nome} seu nome em minúsculas é ${nome.toLowerCase()} <br>`)*/
+
+        var n1 = 1545.5;
+
+        /*n1.toFixed(2) // Deixa o número com duas casas decimais após a virgula
+        n1.toFixed(2).replace('.', ',') // Deixa o número com duas casas decimais depois da virgula e troca o ponto por virgula
+
+        //Formatando Dinheiro
+        n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) // REAL
+        n1.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'}) //Dolar
+        n1.toLocaleString('pt-BR', {style: 'currency', currency: 'EUR'}) // EURO*/
+
+        document.write(`O valor formatado para Real é ${n1.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}<br> `)
+        document.write(`O valor formatado para EURO é ${n1.toLocaleString('pt-BR', { style: 'currency', currency: 'EUR' })} <br>`)
+        document.write(`O valor formatado para Dolar é ${n1.toLocaleString('pt-BR', { style: 'currency', currency: 'USD' })} <br>`)
+
+        var idade = 19;
+
+        idade >= 18 ? 'MAIOR' : 'MENOR'
+
+    </script>
+
+</body>
+
+</html>
