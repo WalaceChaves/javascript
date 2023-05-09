@@ -6,40 +6,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Somando Valores</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        input {
+            display: block;
+            margin: 0px auto 20px auto;
+            border-radius: 30px;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.519);
+        }
+
+        div {
+            padding: 0px;
+            margin: 10px;
+            margin-left: 50%;
+        }
+
+        p {
+            text-align: center;
+            margin: auto;
+            border-style: dashed;
+            width: 10%;
+            background-color: grey;
+        }
+    </style>
 </head>
 
+
 <body>
-    <h1>Somando Valores</h1>
 
-    <label for="">First Value </label> <input type="number" name="txtn1" id="txtn1">
-    <p></p>
-    <label for="">Second Value</label> <input type="number" name="txtn2" id="txtn2">
-    <p></p>
-    
+    <h1>Soma de Valores</h1>
 
 
-    <input type="button" value="Calcular" name="btncalc" id="btncalc" onclick="calcular()">
+    <input type="text" name="n1" id="n1">
+    <div>+</div> <input type="text" name="n2" id="n2">
+
+    <input type="button" value="Calcular" onclick="somar()">
+
+    <p id="resul">Resultado</p>
+
+    <script>
+        function somar() {
+
+            var txt1 = document.getElementById('n1')
+            var txt2 = document.getElementById('n2')
+            var res = document.querySelector('p#resul')
+            var n1 = Number(txt1.value)
+            var n2 = Number(txt2.value)
+            var soma = n1 + n2
+            res.innerText = soma
 
 
-
+        }
+    </script>
 </body>
-
-<script>
-
-    function calcular() {
-
-        var tn1 = document.getElementById('txtn1')
-        var tn2 = document.querySelector('input#txtn2')
-        var n1 = Number(tn1.value)
-        var n2 = Number(tn2.value)
-        var s = n1 + n2
-
-
-
-
-
-    }
-
-</script>
 
 </html>
