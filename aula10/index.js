@@ -1,7 +1,10 @@
-let data_atual = new Date();
+let data = new Date();
+var dia = data.getDate().toString().padStart(2, '0');
+var mes = String(data.getMonth() + 1).padStart(2, '0');
+var ano = data.getFullYear();
 
-let dia = data_atual.getDay();
-let mes = data_atual.getMonth();
-let ano = data_atual.getFullYear();
+var hora = data.getHours().toString().padStart(2, '0');
+var minuto = data.getMinutes().toString().padStart(2, '0');
+var segundos = String(data.getSeconds()).padStart(2, '0');
 
-console.log(`Hojé é dia ${String.format("%0n2", dia)}/${mes}/${ano}`)
+
