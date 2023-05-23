@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Template</title>
+    <style>
+        .elem {
+            background: blueviolet;
+            width: 300px;
+            height: 150px;
+            margin: 20px auto;
+            transition: 500ms linear;
+            /*500ms: a duração da transição é em milissegundos / linear: a função de tempo*/
+
+            /*Exemplo: div {
+            transition: <propriedade> <duração> <função de tempo> <atraso>;
+            }*/
+
+
+            /*#delay {
+            transition-property: font-size; transition-property: a propriedade que você quer animar. Pode ser qualquer elemento do CSS, como background, height, translateY, translateX e assim por diante.
+            transition-duration: 4s; transition-duration: a duração da transição
+            transition-delay: 2s; transition-delay: o atraso antes de a transição começar
+            }*/
+
+        }
+
+        .elem:hover {
+            opacity: 0.5;
+            transform: scale(1.1);
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="elem"></div>
+
+</body>
+
+</html>
