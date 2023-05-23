@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Modelo de Exercicio</title>
+    <style>
+        body {
+            background-color: rgb(95, 95, 247);
+            font: normal 15pt Arial;
+        }
+
+        header {
+            color: white;
+            text-align: center;
+
+        }
+
+        section {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            width: 500px;
+            margin: auto;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.52);
+        }
+
+        footer {
+            color: white;
+            text-align: center;
+            font-style: italic;
+        }
+
+        div#msg {
+            font-weight: 700;
+            text-align: center;
+            font-size: 20px;
+
+
+        }
+
+        img {
+            display: block;
+            width: 300px;
+            border-radius: 100%;
+            margin: 20px auto 20px auto;
+
+        }
+    </style>
+</head>
+
+<body onload="carregar()">
+
+    <header>
+        <h1>Hora do Dia</h1>
+    </header>
+
+    <section>
+        <div id="msg">Aqui vai aparecer a hora</div>
+        <div id="foto">
+            <img id="imagem" src="imagens/morning.jpg" alt="">
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; CursoemVideo</p>
+    </footer>
+
+    <script>
+
+        function carregar() {
+            var data = new Date(2023, 03, 03, 20, 0, 0, 0);
+            var hora = data.getHours();
+
+            var msg = document.getElementById('msg');
+            var img = document.getElementById('imagem');
+
+            msg.innerHTML = `Agora são ${hora} Horas`
+
+            if (hora >= 0 && hora < 12) {
+                // Bom dia
+                img.src = 'imagens/morning.jpg'
+                window.document.body.style.background = '#fce283'
+            } else if (hora >= 12 && hora < 18) {
+                //Boa tarde
+                img.src = 'imagens/afternoon.jpg'
+                window.document.body.style.background = '#f9b554'
+            } else {
+                // boa noite
+                img.src = 'imagens/noite.jpg'
+                window.document.body.style.background = '#615271'
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

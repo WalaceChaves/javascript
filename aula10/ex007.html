@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Valores</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.3em;
+        }
+
+        h1 {
+            text-align: center;
+            margin: auto;
+        }
+
+        input {
+            display: block;
+            margin: 15px auto;
+            font-size: 1.3em;
+            box-shadow: 3px 3px 3px black;
+            border-radius: 40px;
+        }
+
+        p {
+            display: block;
+            text-align: center;
+            margin-top: 10x;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Somar Valores</h1>
+
+    <input type="text" name="txt1" id="txt1">
+    <p>+</p> <input type="text" name="txt2" id="txt2">
+    <input type="button" value="Calcular" onclick="somar()">
+
+    <p id="result">Resultado</p>
+
+    <script>
+
+        function somar() {
+            var j_txt1 = document.getElementById('txt1')
+            var j_txt2 = document.querySelector('input#txt2')
+            var result = document.querySelector('p#result')
+            var n1 = Number(j_txt1.value)
+            var n2 = Number(j_txt2.value)
+            var soma = n1 + n2
+            result.innerText = `A soma entre ${n1} e ${n2} é ${soma}`
+        }
+    </script>
+
+
+
+</body>
+
+</html>

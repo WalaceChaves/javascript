@@ -46,6 +46,30 @@
         mouseout = ao sair com o curso da div
     -->
 
+    <script>
+        var area = window.document.getElementById('area')
+
+        area.addEventListener('click', clicou)
+        area.addEventListener('moussenter', entrou)
+        area.addEventListener('mouseout', saiu)
+
+        function clicou() {
+            area.style.background = 'red'
+            area.innerText = 'Clicou'
+        }
+
+        function entrou() {
+            area.style.background = 'blue'
+            area.innerText = 'Entrou'
+
+        }
+
+        function saiu() {
+            area.style.background = 'green'
+            area.innerText = 'Saiu'
+        }
+    </script>
+
 </body>
 
 </html>

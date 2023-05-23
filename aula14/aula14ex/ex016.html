@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'poppins', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            width: 100%;
+
+            background-image: url('../images/background6.jpg');
+            background-position: center;
+            background-size: cover;
+        }
+
+        .form-box {
+            position: relative;
+            width: 500px;
+            height: auto;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            border-radius: 20px;
+            background: transparent;
+            backdrop-filter: blur(15px);
+            /*Embaça o fundo da DIV*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        h2 {
+            font-size: 2em;
+            color: #fff;
+            text-align: center;
+        }
+
+        .inputbox {
+            position: relative;
+            margin: 30px 0;
+            width: 310px;
+            border-bottom: 2px solid #fff;
+        }
+
+        .inputbox label {
+            position: absolute;
+            top: 50%;
+            left: 5px;
+            transform: translateY(-50%);
+            color: #fff;
+            font-size: 1em;
+            pointer-events: none;
+            transition: .5s;
+        }
+
+        input:focus~label,
+        input:valid~label {
+            top: -10px;
+        }
+
+        .inputbox input {
+            width: 100%;
+            height: 50px;
+            background: transparent;
+            border: none;
+            outline: none;
+            font-size: 1em;
+            padding: 0 35px 0 5px;
+            color: #fff;
+        }
+
+        button {
+            width: 100%;
+            height: 40px;
+            border-radius: 40px;
+            background: transparent;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 600;
+        }
+
+        #res {
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+            background: transparent;
+            word-wrap: break-word;
+            
+        }
+
+        footer {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 30px 0;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <div class="form-box">
+            <div class="form-value">
+                <form action="">
+                    <h2>Vamos Contar</h2>
+                    <div class="inputbox">
+                        <input type="text" id="inicio" required autocomplete="off"> <label for="">Inicio</label>
+                    </div>
+
+                    <div class="inputbox">
+                        <input type="text" id="fim" required autocomplete="off"> <label for="">Fim</label>
+                    </div>
+
+                    <div class="inputbox">
+                        <input type="text" id="passo" required autocomplete="off"> <label for="">Passo</label>
+                    </div>
+
+                    <button type="button" onclick="contar()">Conte Aqui</button>
+
+                    <div id="res"></div>
+
+                </form>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; CursoEmVideo</p>
+        </footer>
+
+    </section>
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #div1 {
+            margin: auto;
+            width: 900px;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px auto;
+            font-size: 5em;
+        }
+
+        p {
+            text-align: justify;
+            font-size: 1.4em;
+            line-height: 27px;
+        }
+
+        table {
+            text-align: center;
+            margin: auto;
+            width: 400px;
+            border-collapse: collapse;
+            box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.854);
+        }
+
+        table,
+        td {
+
+            border-radius: 5px;
+            -moz-border-radius: 5px;
+
+        }
+
+        caption {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            font-size: 1.1em;
+
+        }
+
+        th {
+            padding: 20px;
+        }
+
+        tbody>tr:nth-child(2n-1) {
+            background-color: white;
+        }
+
+        tbody>tr:nth-child(2n) {
+            background-color: grey;
+        }
+
+        #classif {
+            background-color: rgba(42, 42, 222, 0.594);
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /*Configuração Form Html*/
+
+        form {
+            text-align: center;
+            margin: 50px auto;
+
+        }
+
+        label {
+            font-size: 1.5em;
+        }
+
+
+        form {
+            background-image: linear-gradient(to bottom, grey, rgba(42, 42, 222, 0.594));
+        }
+
+        #input1 {
+            display: block;
+            margin: 0 auto 40px auto;
+            text-align: center;
+            padding: 5px;
+
+        }
+
+        #input2 {
+            display: block;
+            margin: 0 auto 50px auto;
+            text-align: center;
+            padding: 5px;
+
+        }
+
+        #btn1 {
+            padding: 20px;
+            margin-bottom: 10px;
+            width: 200px;
+            font-size: 30px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        #resultado {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bolder;
+            font-size: 1.5em;
+            position: relative;
+            bottom: 210px;
+            left: 150px;
+            width: 200px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="div1">
+        <h1>O que é IMC</h1>
+        <p>Quem nunca ouviu falar dessa sigla, IMC? O Índice de Massa Corporal está presente na avaliação física, em
+            pesquisas científicas, em reportagens na tv e revistas… Mas o que é o IMC? Como calcular?
+            IMC significa Índice de Massa Corporal e trata-se de uma medida do peso de cada pessoa, sendo uma relação
+            entre
+            a massa da pessoa e a sua altura.
+            Esta é uma medida de referência internacional reconhecida pela OMS (Organização Mundial da Saúde), mas que
+            não
+            mede diretamente a gordura corporal, porque não contempla a massa magra, massa gorda, líquidos e a estrutura
+            óssea da pessoa em questão.
+            O método de cálculo do IMC é simples, rápido e permite uma avaliação geral para definir se uma pessoa se
+            encontra em risco de obesidade.
+            Esse índice é calculado pela fórmula: peso / altura². A massa deve ser definida em quilogramas (kg) e a
+            altura
+            em metros (m).
+            Por exemplo, uma pessoa que pesa 58 quilos e mede 1,65 metros terá como resultado um IMC de 21,3. De acordo
+            com
+            os dados de referência, esta pessoa tem um peso adequado à altura.
+            Os dados de referência para um adulto estão indicados abaixo:
+            < 18,5 - Abaixo do peso 18,5-24,9 - Normal 25,0-29,9 - Excesso de peso 30,0-34,9 - Obesidade Leve (Grau I)
+                35,0-39,9 - Obesidade Severa (Grau II)> 40,0 - Obesidade Mórbida (Grau III)
+                É importante lembrar que essa tabela não é válida para crianças. O IMC infantil possui uma tabela
+                específica
+                que deve ser verificada ao longo do tempo. Isso porque as crianças têm tendência a emagrecer conforme
+                vão
+                crescendo.
+                Uma limitação do IMC é que nem sempre um valor alto significa que a pessoa é obesa. Por exemplo, uma
+                pessoa
+                com muita massa muscular e pouca massa gorda pode ter um elevado IMC (depende da sua altura) e no
+                entanto
+                não é obesa.
+        </p>
+    </div>
+
+    <table>
+        <caption>Tabela IMC</caption>
+        <thead>
+            <tr>
+                <th id="classif" scope="col">IMC</th>
+                <th id="classif" scope="col">Classificação</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="classif">abaixo de 18,5</td>
+                <td>abaixo do peso</td>
+            </tr>
+            <tr>
+                <td id="classif">entre 18,6</td>
+                <td>Peso Ideal (Parabéns)</td>
+            </tr>
+            <tr>
+                <td id="classif">entre 25,0 e 29,9</td>
+                <td>Levemente acima do peso</td>
+            </tr>
+            <tr>
+                <td id="classif">entre 30,0 e 34,9</td>
+                <td>Obesidade grau I</td>
+            </tr>
+            <tr>
+                <td id="classif">entre 35,0 e 39,0</td>
+                <td>Obesidade grau II (severa)</td>
+            </tr>
+            <tr>
+                <td id="classif">acima de 40</td>
+                <td>Obesidade III (móbida)</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <form action="">
+        <label for="" id="lbl1">Digite seu Peso: </label>
+        <input type="text" name="input1" id="input1">
+
+        <label for="">Digite sua Altura: </label>
+        <input type="text" name="input2" id="input2">
+
+        <input type="button" value="Calcular" id="btn1" onclick="calcular()">
+
+        <div id="resultado"></div>
+    </form>
+
+    <script>
+
+        function calcular() {
+            var txtpeso = document.querySelector("input#input1")
+            var txtaltura = document.querySelector('input#input2')
+            var peso = Number(txtpeso.value)
+            var altura = Number(txtaltura.value)
+            var resultado = document.getElementById('resultado')
+            var imcbruto = (peso / (Math.pow(altura, 2))).toFixed(2)
+            var imcliquido = (peso / (Math.pow(altura, 2))).toFixed(1)
+
+            var classificacao;
+
+            if (imcliquido < 18.5) {
+                classificacao = 'Abaixo do peso'
+
+            } else if (imcliquido <= 24.9) {
+                classificacao = 'Peso Ideal (Parabéns)'
+
+            } else if (imcliquido < 29.9) {
+                classificacao = 'Obesidade I'
+
+            } else if (imcliquido <= 39.9) {
+                classificacao = 'Obesidade II (Severa)'
+            } else {
+                classificacao = 'Obesidade III (Mórbida)'
+            }
+
+            resultado.innerHTML = `Seu IMC é: ${imcbruto} <br>
+            Resultado: ${classificacao}`
+
+
+
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>
